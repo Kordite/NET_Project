@@ -17,10 +17,13 @@ namespace MvcMovie.Controllers
             return View();
         }
 
-        public string Welcome(string name, int numTimes)
+        public IActionResult Welcome(string name, int numTimes)
         {
-            return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is: {numTimes}");
-        }
+            ViewData["Message"] = "Hello " + name;
+            ViewData["NumTimes"] = numTimes;
+
+            return View();
+         }
     }
 }
 
