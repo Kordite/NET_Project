@@ -1,9 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
+using Microsoft.EntityFrameworkCore;
+using MvcMovie.Models;
+using MvcMovie;
+using System.IO;
+//using Microsoft.AspNetCore.Mvc.
+//using Microsoft.AspNetCore.Hosting.Internal;
 
 namespace MvcMovie
 {
@@ -19,7 +24,15 @@ namespace MvcMovie
                 .UseApplicationInsights()
                 .Build();
 
+            //var host = CreateWebHostBuilder(args).Build();
+
+            //using (var scope = host.Services.CreateScope())
+
             host.Run();
         }
+
+        //public static IWebHostBuilder CreateWebHostBuilder(string[] args) => 
+           
+            
     }
 }
